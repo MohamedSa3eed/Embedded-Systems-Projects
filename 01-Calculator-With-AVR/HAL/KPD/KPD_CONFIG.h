@@ -2,13 +2,13 @@
 #define KPD_CONFIG_H
 
 //port that KPD is connected to :
-#define KPD_PORT PORTA
+#define KPD_PORT PORTD
 
 // flag for not pressing on KPD :
 #define KPD_NOT_PRESSED 0xff
 
 // KPD values configuration :
-#define KPD_VALUES {  {1,2,3,4} , {5,6,7,8} , {9,10,11,12} , {13,14,15,16} }
+#define KPD_VALUES {  {7,8,9,'/'} , {4,5,6,'*'} , {1,2,3,'-'} , {'c',0,'=','+'} }
 
 // columns configuration :
 #define KPD_COLUMN0_PIN PIN0

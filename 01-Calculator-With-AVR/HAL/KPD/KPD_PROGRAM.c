@@ -7,10 +7,10 @@
 void KPD_Init(void)
 {
   //initialize columns
-  DIO_SetPinDirection(KPD_PORT, KPD_COLUMN0_PIN , HIGH);
-  DIO_SetPinDirection(KPD_PORT, KPD_COLUMN1_PIN , HIGH);
-  DIO_SetPinDirection(KPD_PORT, KPD_COLUMN2_PIN , HIGH);
-  DIO_SetPinDirection(KPD_PORT, KPD_COLUMN3_PIN , HIGH);
+  DIO_SetPinDirection(KPD_PORT, KPD_COLUMN0_PIN , OUTPUT);
+  DIO_SetPinDirection(KPD_PORT, KPD_COLUMN1_PIN , OUTPUT);
+  DIO_SetPinDirection(KPD_PORT, KPD_COLUMN2_PIN , OUTPUT);
+  DIO_SetPinDirection(KPD_PORT, KPD_COLUMN3_PIN , OUTPUT);
 
   //initialize rows
   DIO_SetPinDirection(KPD_PORT, KPD_ROW0_PIN , INPUT);
@@ -19,7 +19,7 @@ void KPD_Init(void)
   DIO_SetPinDirection(KPD_PORT, KPD_ROW3_PIN , INPUT);
 
   //make all pins high 
-  DIO_SetPortDirection(KPD_PORT, PORT_HIGH);
+  DIO_SetPortValue(KPD_PORT, PORT_HIGH);
 }
 
 u8 KPD_GetPressedKey(void)
@@ -41,7 +41,6 @@ u8 KPD_GetPressedKey(void)
 				if(value == LOW)
 				{
 					Local_PressedKey = Local_KPDArr[row_index][col_index] ;  //pressed value
-
 					// busy waiting until switch is released     human takes 250ms to press the switch
 					while (value == LOW )
 					{
