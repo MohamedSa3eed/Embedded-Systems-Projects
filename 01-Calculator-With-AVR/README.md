@@ -3,17 +3,23 @@
 This is a simple calculator with `AVR`
 
 ## Components : 
-1. # Hardware
+# 1.  Hardware
 
-      1. AVR-ATMEGA32 
+       AVR-ATMEGA32 
 
-      1. LCD 2x16
+       LCD 2x16
 
-      1. Keypad 4x4 
+       Keypad 4x4 
 
-1. # Software
-  
-      1. All the drivers writen in `C` (LIB, MCAL, HAL, APP)
+# 2.  Software
+      ...
+      .
+      . LIB  for essential libraries 
+      . MCAL for internal periphrals drivers 
+      . HAL  for external periphrals drivers 
+      . APP  for the main application 
+      .
+      ..
 
 
 ![gif](https://github.com/MohamedSa3eed/Embedded-Systems-Projects/blob/master/01-Calculator-With-AVR/SIMULATION/nombre_final.gif)
